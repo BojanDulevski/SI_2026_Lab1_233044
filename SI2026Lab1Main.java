@@ -77,7 +77,7 @@ class Library {
                 return;
             }
         }
-        System.out.println("Book not found.");
+        System.out.println("Book checked out.");
     }
 
     public void returnBook(String title) {
