@@ -55,6 +55,14 @@ class Library {
     public boolean searchBookByTitle(String title) {
         return false;
     }
+    public boolean searchBook(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
@@ -120,5 +128,6 @@ public class SI2026Lab1Main {
         library.addBook(new Book("1984", "George Orwell", "Dystopian"));
 
         System.out.println("Library initialized.");
+        System.out.println(library.searchBook("Библија"));)
     }
 }
